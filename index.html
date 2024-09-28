@@ -1,10 +1,125 @@
 <html>
 <head>
-<title>Kamalia Sekar Ramadhani</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamalia Sekar Ramadhani</title>
+    <link rel="icon" type="image/x-icon" href="C:\WAD4610\favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center; 
+            background-color: rgb(209, 191, 209); 
+            margin: 0;
+        }
+
+        img {
+            margin: 20px 0;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; 
+            border: 5px solid blanchedalmond; 
+            object-fit: cover; 
+        }
+
+        .name-box {
+            background-color: blanchedalmond;
+            color: rgb(110, 37, 110);
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+            width: 400px;
+            margin-top: 20px;
+        }
+
+        img {
+            margin: 20px;
+            width: 280px;
+            height: 250px;
+        }
+
+        .social-links {margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+    
+        .social-links a:hover {
+            color: blanchedalmond; 
+        }
+
+        .name-box h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .name-box h2 {
+            margin: 10px 0 0 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .date-time {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #482020;
+            background-color: lightgray;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #482020;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color:rgb(203, 169, 155);
+        }
+    </style>
 </head>
 <body>
-    <h1> Kamalia Sekar Ramadhani</h1>
-    <h2> 1202220075</h2>
-    <h2> Sistem Informasi</h2>
+    <img src="Lia.jpg" alt="Kamalia Sekar">
+    <div class="name-box">
+        <h1><b>KAMALIA SEKAR RAMADHANI</b></h1>
+        <h2>1202220075</h2>
+    </div>
+
+    <div class="social-links">
+        <a href="https://bit.ly/InstagramKamalia" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kamaliaskr" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://bit.ly/SpotifyLia" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>   
+    </div>
+
+    <div class="date-time">
+        <span id="currentDateTime">Loading date and time...</span>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            };
+            const dateTimeString = now.toLocaleDateString('en-US', options);
+            document.getElementById('currentDateTime').textContent = dateTimeString;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
 </body>
 </html>
